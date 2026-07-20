@@ -4,17 +4,15 @@ Static, no-build site (HTML/CSS/JS) implementing the layout, typography, color-s
 
 ## About the images
 
-This environment has no network access to jkvm.in, so the real logo and photos (hero, event photos, headshots, gallery) could not be pulled in. Every image is a labeled placeholder SVG in `assets/img/`, sized and positioned to match where the real file should go — swap in the real file **using the exact same filename** and the layout requires no changes.
+This environment has no network access to jkvm.in, so most photos couldn't be pulled in directly. The **logo** (`assets/img/logo.png`) and the **hero background** (`assets/img/hero-bg.jpg`) are now real assets recovered from the live site (`jkvm.in/wp-content/uploads/2024/07/logo2.png` and `.../jkvm_slider_7.png`). Everything else below is still a labeled placeholder SVG in `assets/img/`, sized and positioned to match where the real file should go — swap in the real file **using the exact same filename** and the layout requires no changes.
 
 | Placeholder | Replace with |
 |---|---|
-| `assets/img/logo.svg`, `logo-white.svg` | The real JKVM logo (light/dark variants) |
-| `assets/img/hero-bg.jpg.svg` | Hero background photo (1920×1080) |
 | `assets/img/about-inline.jpg.svg` | "Our Story" inline photo |
-| `assets/img/highlight-*.jpg.svg` | Shivratri / Balidan Diwas / Gaashtaarukh photos |
+| `assets/img/highlight-*.jpg.svg` | Samoohik Shivratri / Balidan Diwas / Gaashtaarukh photos |
 | `assets/img/gallery-*.jpg.svg` | Gallery photos |
-| `assets/img/team-*.jpg.svg` | Executive team headshots |
-| `assets/img/video-thumb-*.jpg.svg` | Video series thumbnails |
+| `assets/img/team-*.jpg.svg` | Executive team headshots (Patron/President/Treasurer + members) |
+| `assets/img/video-thumb-*.jpg.svg` | GenNext Talk Series video thumbnails |
 
 Video cards (`.video-card[data-video-id]`) are empty — add each real YouTube video ID to open a proper embed instead of the placeholder note.
 
