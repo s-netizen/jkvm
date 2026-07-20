@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="GALLERY 11 placeholder">
+  <defs>
+    <linearGradient id="g_3ee18c9e" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2B3A5C"/>
+      <stop offset="100%" stop-color="#3E5279"/>
+    </linearGradient>
+    <pattern id="pat_g_3ee18c9e" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(20)">
+      <circle cx="2" cy="2" r="1.4" fill="#FBF3E7" opacity="0.10"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g_3ee18c9e)" rx="0"/>
+  <rect width="800" height="1000" fill="url(#pat_g_3ee18c9e)"/>
+  
+    <g opacity="0.35" transform="translate(400.0,469.4)">
+      <circle r="72.0" fill="none" stroke="#FBF3E7" stroke-width="2.5"/>
+      <path d="M -36.0 0 L 0 40.0 L 48.0 -32.0"
+            fill="none" stroke="#FBF3E7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  <text x="400.0" y="525.5" font-family="Arial, sans-serif" font-size="34" font-weight="700"
+        fill="#FBF3E7" text-anchor="middle" opacity="0.92">GALLERY 11</text>
+  <text x="400.0" y="553.788" font-family="Arial, sans-serif" font-size="17.68" fill="#FBF3E7" text-anchor="middle" opacity="0.72">Existing gallery photo</text>
+</svg>
