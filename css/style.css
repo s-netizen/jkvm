@@ -166,12 +166,15 @@ section{ position: relative; }
   border-color: var(--color-line);
   box-shadow: 0 4px 22px rgba(36,27,20,0.08);
 }
+.site-header.scrolled .header-inner{ height: calc(var(--header-h) - 14px); }
 .header-inner{
   height: var(--header-h);
   display: flex; align-items: center; justify-content: space-between; gap: var(--space-md);
+  transition: height var(--dur-med) var(--ease-out);
 }
+.site-header.scrolled .logo-lockup img{ height: 36px; }
 .logo-lockup{ display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
-.logo-lockup img{ height: 42px; width: auto; transition: transform var(--dur-fast) var(--ease-out); }
+.logo-lockup img{ height: 42px; width: auto; transition: transform var(--dur-fast) var(--ease-out), height var(--dur-med) var(--ease-out); }
 .logo-lockup:hover img{ transform: rotate(-4deg) scale(1.04); }
 .logo-lockup .logo-text{ display: flex; flex-direction: column; line-height: 1.15; }
 .logo-lockup .logo-text strong{ font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; }
@@ -400,6 +403,10 @@ section{ position: relative; }
 .read-more-btn svg{ width: 16px; height: 16px; transition: transform var(--dur-fast) var(--ease-out); }
 .read-more-btn.is-open svg{ transform: rotate(180deg); }
 
+.story-stats{ display: flex; gap: var(--space-lg); margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid var(--color-line); }
+.story-stats strong{ display: block; font-family: var(--font-display); font-size: var(--fs-lg); color: var(--color-indigo); }
+.story-stats span{ font-size: var(--fs-xs); color: var(--color-ink-faint); text-transform: uppercase; letter-spacing: 0.06em; }
+
 /* ==========================================================================
    Photo highlights carousel
    ========================================================================== */
@@ -493,7 +500,7 @@ section{ position: relative; }
   overflow: hidden; transition: transform var(--dur-med) var(--ease-out), box-shadow var(--dur-med) var(--ease-out), opacity var(--dur-med), max-height var(--dur-med);
 }
 .team-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-md); }
-.team-card.is-hidden{ display: none; }
+.team-card.is-hidden, .member-avatar.is-hidden{ display: none; }
 .team-lead-grid .team-card .team-photo{ aspect-ratio: 1/1.05; }
 .team-card .team-photo{ position: relative; aspect-ratio: 1/1; overflow: hidden; }
 .team-card .team-photo img{ width: 100%; height: 100%; object-fit: cover; transition: transform 500ms var(--ease-out); }
@@ -509,12 +516,20 @@ section{ position: relative; }
 .team-lead-grid .team-info h3{ font-size: var(--fs-lg); }
 .team-info .role{ font-size: var(--fs-sm); color: var(--color-deep-red); font-weight: 600; margin-top: 0.15rem; }
 
-.team-members-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }
+.team-members-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md) var(--space-sm); }
 @media (min-width: 640px){ .team-members-grid{ grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 1080px){ .team-members-grid{ grid-template-columns: repeat(4, 1fr); } }
-.team-members-grid .team-info{ padding: var(--space-sm); }
-.team-members-grid .team-info h3{ font-size: var(--fs-sm); }
-.team-members-grid .team-info .role{ font-size: var(--fs-xs); }
+@media (min-width: 1080px){ .team-members-grid{ grid-template-columns: repeat(6, 1fr); } }
+
+.member-avatar{ text-align: center; cursor: default; }
+.member-avatar .avatar-ring{
+  width: 96px; height: 96px; margin-inline: auto; margin-bottom: var(--space-sm);
+  border-radius: 50%; overflow: hidden; border: 2px solid transparent;
+  transition: border-color var(--dur-med) var(--ease-out), transform var(--dur-med) var(--ease-spring);
+}
+.member-avatar:hover .avatar-ring{ border-color: var(--color-chinar); transform: scale(1.06); }
+.member-avatar .avatar-ring img{ width: 100%; height: 100%; object-fit: cover; }
+.member-avatar h3{ font-family: var(--font-display); font-size: var(--fs-sm); font-weight: 700; }
+.member-avatar .role{ font-size: var(--fs-xs); color: var(--color-ink-faint); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.15rem; }
 
 /* ==========================================================================
    Video series

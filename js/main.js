@@ -177,7 +177,7 @@
   function initTeamFilter() {
     var tabs = $$('.team-filters .gallery-tab');
     if (!tabs.length) return;
-    var cards = $$('.team-card');
+    var cards = $$('.team-card, .member-avatar');
     tabs.forEach(function (tab) {
       tab.addEventListener('click', function () {
         tabs.forEach(function (t) { t.classList.remove('is-active'); });
